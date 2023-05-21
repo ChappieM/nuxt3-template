@@ -40,3 +40,12 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## 本番環境(Docker)
+
+```bash
+docker build --target prod -t nuxt3-template:latest .
+docker run --init --name nuxt3-template -p 80:3000 nuxt3-template:latest
+```
+
+`--init`オプションを使用しないと、デフォルトのシグナルハンドラが機能しない。
