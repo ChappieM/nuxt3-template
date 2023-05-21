@@ -1,11 +1,17 @@
 {
   "name": "Node env",
   "build": {
-    "dockerfile": "Dockerfile",
+    "dockerfile": "../Dockerfile",
     "target": "dev"
   },
   "remoteUser": "node",
   "shutdownAction": "none",
+  "features": {
+    "docker-in-docker": {
+      "version": "latest"
+    }
+  },
+  "runArgs": ["--init"],
   "customizations": {
     "vscode": {
       "settings": {
