@@ -6,13 +6,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "check:lint": "eslint **/*.{js,ts,vue} --ignore-path .gitignore",
+    "fix:lint": "eslint **/*.{js,ts,vue} --ignore-path .gitignore --fix",
+    "check:format": "prettier **/*.{js,ts,vue,json} '!package-lock.json' --ignore-path .gitignore --check",
+    "fix:format": "prettier **/*.{js,ts,vue,json} '!package-lock.json' --ignore-path .gitignore --write"
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.5.0"
-  },
-  "dependencies": {
+    "nuxt": "^3.5.0",
     "@nuxt/eslint-config": "^0.1.1",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
