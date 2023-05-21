@@ -40,9 +40,3 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## ESLint セットアップ
-
-```bash
-npm install -d eslint @nuxt/eslint-config
-```
